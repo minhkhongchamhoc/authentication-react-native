@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from 'react';
 import { StyleSheet, Text, View} from 'react-native'; 
 import { AuthContext } from '../store/auth-context';
 
-function HomeScreen({ navigation }) {
+function SetupScreen({ navigation }) {
   const [fetchedMessage, setFetchedMesssage] = useState('');
 
   const authCtx = useContext(AuthContext);
@@ -31,7 +31,7 @@ function HomeScreen({ navigation }) {
   );
 }
 
-export default HomeScreen;
+export default SetupScreen;
 
 const styles = StyleSheet.create({
   rootContainer: {
