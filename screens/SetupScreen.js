@@ -1,9 +1,8 @@
 import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'; 
+import { StyleSheet, Text, View} from 'react-native'; 
 import { AuthContext } from '../store/auth-context';
-import OrderScreen from './OrderScreen';
 
 function HomeScreen({ navigation }) {
   const [fetchedMessage, setFetchedMesssage] = useState('');
@@ -28,9 +27,6 @@ function HomeScreen({ navigation }) {
       <Text>You authenticated successfully!</Text>
       <Text>{fetchedMessage}</Text>
     
-      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('OrderScreen')}>
-        <Text style={styles.buttonText}>Order Pizza</Text>
-      </TouchableOpacity>
     </View>
   );
 }
